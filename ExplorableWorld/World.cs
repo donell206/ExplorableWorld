@@ -33,10 +33,26 @@ namespace ExplorableWorld
 
                     string element = Grid[y, x];
                     SetCursorPosition(x, y);
+
+                    if (element == "X")
+                    {
+                        ForegroundColor = ConsoleColor.Green;
+                    }
+                    else
+                    {
+                        ForegroundColor = ConsoleColor.Red;
+
+                    }
+
                     Write(element);
 
                 }
             }
+        }
+
+        public string GetElementAt(int x, int y)
+        {
+            return Grid[y, x];
         }
 
         public bool IsPositionWalkable(int x, int y)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace ExplorableWorld
 {
@@ -11,14 +12,14 @@ namespace ExplorableWorld
         public int X { get; set; }
         public int Y { get; set; }
         private string PlayerMarker;
-        private ConsoleColor consoleColor;
+        private ConsoleColor PlayerColor;
 
         public Player(int initialX, int initialY)
         {
             X = initialX;
             Y = initialY;
             PlayerMarker = "O";
-            PlayerColor = consoleColor.Red;
+            PlayerColor = ConsoleColor.Blue;
 
         }
 
